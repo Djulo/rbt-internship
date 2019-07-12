@@ -4,10 +4,10 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from marshmallow import ValidationError
 
-if os.environ['ENV_TYPE'] == 'Dev':
-    from config.development import Development as config
-elif os.environ['ENV_TYPE'] == 'Production':
-    from config.production import Production as config
+# if os.environ['ENV_TYPE'] == 'Dev':
+#     from config.development import Development as config
+# elif os.environ['ENV_TYPE'] == 'Production':
+from config.production import Production as config
 
 
 db = SQLAlchemy()
