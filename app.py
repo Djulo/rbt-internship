@@ -31,8 +31,6 @@ app = create_app(config)
 def _handle_api_error(ex):
     return "Data validation error"
 
-migrate = Migrate(app, db)
-
 @app.route("/test")
 def hello():
     return "Hello world"

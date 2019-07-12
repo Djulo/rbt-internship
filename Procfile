@@ -1,2 +1,2 @@
 web: gunicorn .:app
-release: python flask db upgrade
+release: python manage.py db upgrade
