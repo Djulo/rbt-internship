@@ -27,6 +27,8 @@ def create_app(conf):
 
 app = create_app(config)
 
+migrate = Migrate(app, db)
+
 @app.errorhandler(ValidationError)
 def _handle_api_error(ex):
     return "Data validation error"
